@@ -8,7 +8,7 @@ The script provides an automatic fallback for the Safari 26 and 27 Worker WebGL/
 
 ## Quick Install
 
-Once the Greasy Fork listing is published, the script can be installed directly from Greasy Fork. For now, open Tampermonkey and manually import [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js).
+**[Install the script from Greasy Fork](https://greasyfork.org/en/scripts/589350-google-maps-optimizer-for-safari)**
 
 ## Features
 
@@ -32,11 +32,11 @@ The latest Safari release is recommended. The Worker Canvas workaround is enable
 ## Installation
 
 1. Install and enable [Tampermonkey](https://www.tampermonkey.net/) in Safari.
-2. Create a new userscript from the Tampermonkey dashboard.
-3. Paste the complete contents of [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) and save it.
+2. Open the [Greasy Fork script page](https://greasyfork.org/en/scripts/589350-google-maps-optimizer-for-safari).
+3. Select the install option and confirm it in Tampermonkey.
 4. Reload [Google Maps](https://www.google.com/maps).
 
-After the Greasy Fork listing is created, you can install it from that page and receive subsequent updates automatically.
+Alternatively, create a new userscript from the Tampermonkey dashboard and manually paste the complete contents of [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js).
 
 ## Performance Modes
 

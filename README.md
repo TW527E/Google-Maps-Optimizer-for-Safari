@@ -8,7 +8,7 @@
 
 ## 快速安裝
 
-Greasy Fork 發佈完成後，可直接從 Greasy Fork 安裝。現在也可以開啟 Tampermonkey 並手動匯入 [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js)。
+**[前往 Greasy Fork 安裝腳本](https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化)**
 
 ## 功能
 
@@ -32,11 +32,11 @@ Greasy Fork 發佈完成後，可直接從 Greasy Fork 安裝。現在也可以�
 ## 安裝
 
 1. 在 Safari 安裝並啟用 [Tampermonkey](https://www.tampermonkey.net/)。
-2. 在 Tampermonkey 控制台建立新的使用者腳本。
-3. 將 [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) 的完整內容貼入並儲存。
+2. 前往 [Greasy Fork 腳本頁面](https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化)。
+3. 選擇安裝腳本，並在 Tampermonkey 確認安裝。
 4. 重新載入 [Google Maps](https://www.google.com/maps)。
 
-Greasy Fork 頁面建立後，可直接從該頁面安裝並接收後續更新。
+也可以在 Tampermonkey 控制台建立新的使用者腳本，手動貼入 [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) 的完整內容。
 
 ## 效能模式
 
