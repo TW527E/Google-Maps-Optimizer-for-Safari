@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Google Maps Optimizer for Safari
+// @name         Google Maps Safari 流暢度最佳化
 // @name:en      Google Maps Optimizer for Safari
 // @name:zh-TW   Google Maps Safari 流暢度最佳化
 // @namespace    https://github.com/TW527E/Google-Maps-Optimizer-for-Safari
 // @version      1.0.0
-// @description  Improves Google Maps zooming, panning, and interface responsiveness in Safari, including a Safari 26/27 Worker WebGL workaround.
+// @description  改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
 // @description:en Improves Google Maps zooming, panning, and interface responsiveness in Safari, including a Safari 26/27 Worker WebGL workaround.
 // @description:zh-TW 改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
 // @author       TW527E
