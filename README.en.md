@@ -1,4 +1,4 @@
-[繁體中文](README.md) | [English](README.en.md)
+[繁體中文](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.md) | [English](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.en.md)
 
 # Google Maps Optimizer for Safari
 
@@ -36,7 +36,7 @@ The latest Safari release is recommended. The Worker Canvas workaround is enable
 3. Select the install option and confirm it in Tampermonkey.
 4. Reload [Google Maps](https://www.google.com/maps).
 
-Alternatively, create a new userscript from the Tampermonkey dashboard and manually paste the complete contents of [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js).
+Alternatively, create a new userscript from the Tampermonkey dashboard and manually paste the complete contents of [`google-maps-safari-optimizer.user.js`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/google-maps-safari-optimizer.user.js).
 
 ## Performance Modes
 
@@ -83,11 +83,11 @@ A userscript cannot replace Safari's WebKit engine with Chrome's Chromium engine
 
 ## Files
 
-- [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) — Tampermonkey userscript
-- [`README.md`](README.md) — Traditional Chinese documentation
-- [`README.en.md`](README.en.md) — English documentation
-- [`LICENSE`](LICENSE) — MIT License
+- [`google-maps-safari-optimizer.user.js`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/google-maps-safari-optimizer.user.js) — Tampermonkey userscript
+- [`README.md`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.md) — Traditional Chinese documentation
+- [`README.en.md`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.en.md) — English documentation
+- [`LICENSE`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/LICENSE) — MIT License
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/LICENSE).
