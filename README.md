@@ -1,4 +1,4 @@
-[繁體中文](README.md) | [English](README.en.md)
+[繁體中文](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.md) | [English](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.en.md)
 
 # Google Maps Safari 流暢度最佳化
 
@@ -36,7 +36,7 @@
 3. 選擇安裝腳本，並在 Tampermonkey 確認安裝。
 4. 重新載入 [Google Maps](https://www.google.com/maps)。
 
-也可以在 Tampermonkey 控制台建立新的使用者腳本，手動貼入 [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) 的完整內容。
+也可以在 Tampermonkey 控制台建立新的使用者腳本，手動貼入 [`google-maps-safari-optimizer.user.js`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/google-maps-safari-optimizer.user.js) 的完整內容。
 
 ## 效能模式
 
@@ -81,11 +81,11 @@ __GMOS__.diagnostics()
 
 ## 檔案
 
-- [`google-maps-safari-optimizer.user.js`](google-maps-safari-optimizer.user.js) — Tampermonkey 使用者腳本
-- [`README.md`](README.md) — 繁體中文說明
-- [`README.en.md`](README.en.md) — English documentation
-- [`LICENSE`](LICENSE) — MIT License
+- [`google-maps-safari-optimizer.user.js`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/google-maps-safari-optimizer.user.js) — Tampermonkey 使用者腳本
+- [`README.md`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.md) — 繁體中文說明
+- [`README.en.md`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/README.en.md) — English documentation
+- [`LICENSE`](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/LICENSE) — MIT License
 
 ## 授權
 
-本專案採用 [MIT License](LICENSE)。
+本專案採用 [MIT License](https://github.com/TW527E/Google-Maps-Optimizer-for-Safari/blob/main/LICENSE)。
