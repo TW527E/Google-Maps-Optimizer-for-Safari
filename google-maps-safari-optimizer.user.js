@@ -3,7 +3,7 @@
 // @name:en      Google Maps Optimizer for Safari
 // @name:zh-TW   Google Maps Safari 流暢度最佳化
 // @namespace    https://github.com/TW527E/Google-Maps-Optimizer-for-Safari
-// @version      1.0.1
+// @version      1.0.2
 // @description  改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
 // @description:en Improves Google Maps zooming, panning, and interface responsiveness in Safari, including a Safari 26/27 Worker WebGL workaround.
 // @description:zh-TW 改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
@@ -26,7 +26,7 @@
   'use strict';
 
   const SCRIPT_NAME = 'Google Maps Safari 流暢度最佳化';
-  const SCRIPT_VERSION = '1.0.1';
+  const SCRIPT_VERSION = '1.0.2';
   const STORAGE_KEY = 'gmos-settings-v1';
   const INTERACTION_COOLDOWN_MS = 180;
 
@@ -356,11 +356,19 @@
 
   function showToast() {
     if (!isSafari || settings.mode === 'disabled' || !document.body) return;
+    // 只在安裝／更新後或切換模式後提示一次；sessionStorage 每個分頁各自獨立，
+    // 原本每開一個 Maps 分頁就會再跳一次。之後可從選單「顯示最佳化診斷」查看。
+    const toastKey = 'gmos-toast-seen-v1';
+    const signature = `${SCRIPT_VERSION}:${settings.mode}`;
     try {
-      if (sessionStorage.getItem('gmos-toast-shown-v1') === '1') return;
-      sessionStorage.setItem('gmos-toast-shown-v1', '1');
+      const seen = typeof GM_getValue === 'function'
+        ? GM_getValue(toastKey, '')
+        : localStorage.getItem(toastKey);
+      if (seen === signature) return;
+      if (typeof GM_setValue === 'function') GM_setValue(toastKey, signature);
+      else localStorage.setItem(toastKey, signature);
     } catch {
-      // Safari 封鎖儲存空間時仍可正常執行，僅可能重複顯示提示。
+      // 儲存空間被封鎖時仍可正常執行，僅可能重複顯示提示。
     }
     const toast = document.createElement('div');
     toast.id = 'gmos-startup-toast';
@@ -446,7 +454,8 @@
       settings,
       runtime,
       diagnostics: collectDiagnostics,
-      setMode: saveMode,
+      // 刻意不提供 setMode：這個物件在頁面環境（@sandbox raw）中，Google Maps
+      // 或頁面上的任何第三方腳本都能呼叫它，不應讓它們寫入設定並重新載入。
     }),
   });
 
