@@ -3,15 +3,15 @@
 // @name:en      Google Maps Optimizer for Safari
 // @name:zh-TW   Google Maps Safari 流暢度最佳化
 // @namespace    https://github.com/TW527E/Google-Maps-Optimizer-for-Safari
-// @version      1.0.2
+// @version      1.0.3
 // @description  改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
 // @description:en Improves Google Maps zooming, panning, and interface responsiveness in Safari, including a Safari 26/27 Worker WebGL workaround.
 // @description:zh-TW 改善 Safari 上 Google Maps 的縮放、拖曳與介面反應速度，並繞過 Safari 26/27 的 Worker WebGL 卡頓問題。
 // @author       TW527E
 // @homepageURL  https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化
 // @supportURL   https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化/feedback
-// @include      /^https:\/\/(?:www\.)?google\.[a-z.]+\/maps(?:[\/?#]|$)/
-// @include      /^https:\/\/maps\.google\.[a-z.]+\/.*/
+// @include      /^https:\/\/(?:www\.)?google\.(?:com|[a-z]{2}|com?\.[a-z]{2})\/maps(?:[\/?#]|$)/
+// @include      /^https:\/\/maps\.google\.(?:com|[a-z]{2}|com?\.[a-z]{2})\/.*/
 // @run-at       document-start
 // @sandbox      raw
 // @noframes
@@ -321,8 +321,10 @@
 
         if (settings.lazyPhotos) {
           const source = image.currentSrc || image.src || '';
-          const width = Number(image.getAttribute('width')) || image.width;
-          const height = Number(image.getAttribute('height')) || image.height;
+          // A photo that has not loaded yet reports 0x0; its container already has the layout size.
+          const box = image.parentElement;
+          const width = Number(image.getAttribute('width')) || image.width || box?.clientWidth || 0;
+          const height = Number(image.getAttribute('height')) || image.height || box?.clientHeight || 0;
           const isGooglePhoto = /(?:googleusercontent\.com|ggpht\.com)/i.test(source);
           if (isGooglePhoto && (width >= 160 || height >= 100)) {
             image.loading = 'lazy';
@@ -407,7 +409,12 @@
 
   function saveMode(nextMode) {
     if (!Object.hasOwn(PRESETS, nextMode)) return;
-    if (writeStoredSettings({ mode: nextMode })) location.reload();
+    if (writeStoredSettings({ mode: nextMode })) {
+      location.reload();
+      return;
+    }
+    // Nothing changed on the page; say so instead of failing silently.
+    alert('設定儲存失敗，模式維持原設定。\n請檢查腳本管理器的儲存權限；要立即停用最佳化，可在腳本管理器中關閉此腳本。');
   }
 
   function registerMenuCommands() {
