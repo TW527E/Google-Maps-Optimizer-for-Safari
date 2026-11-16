@@ -10,8 +10,8 @@
 // @author       TW527E
 // @homepageURL  https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化
 // @supportURL   https://greasyfork.org/zh-TW/scripts/589350-google-maps-safari-流暢度最佳化/feedback
-// @include      /^https:\/\/(?:www\.)?google\.(?:com|[a-z]{2}|com?\.[a-z]{2})\/maps(?:[\/?#]|$)/
-// @include      /^https:\/\/maps\.google\.(?:com|[a-z]{2}|com?\.[a-z]{2})\/.*/
+// @include      /^https:\/\/(?:www\.)?google\.(?:com|cat|[a-z]{2}|com?\.[a-z]{2})\/maps(?:[\/?#]|$)/
+// @include      /^https:\/\/maps\.google\.(?:com|cat|[a-z]{2}|com?\.[a-z]{2})\/.*/
 // @run-at       document-start
 // @sandbox      raw
 // @noframes
